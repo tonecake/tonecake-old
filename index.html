@@ -1,1 +1,65 @@
-1
+<!doctype HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tonecake</title>
+
+<link rel="stylesheet" type="text/css" href="lib/css/common.css">
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+<script type="text/javascript" src="./lib/js/core.js"></script>
+
+<script type="text/javascript" src="./lib/js/frequency.js"></script>
+<script type="text/javascript" src="./lib/js/harmony.js"></script>
+<script type="text/javascript" src="./lib/js/organ.js"></script>
+<script type="text/javascript" src="./lib/js/cake.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>tonecake</h1>
+        <p>develop version</p>
+    </header>
+    <div class="interface">
+        <ul class="setting">
+            <li class="modulation">modulation</li>
+            <li>audio</li>
+        </ul>
+    </div>
+    <div class="functions">
+        <ul>
+            <li id="btnSustain">sustain</li>
+            <li id="btnSeptime">+7</li>
+            <li id="btn6">6</li>
+            <li id="btn4">4</li>
+            <li id="btn2">2</li>
+        </ul>
+    </div>
+
+    <script>
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-56330530-1', 'auto');
+        ga('send', 'pageview');
+
+        var cake = tonecake.create({
+            tone : 'a',
+            tonart : 'dur',
+
+            cakeColor : "FF0033",
+            fontColor : "FFFFff",
+            hexagonWidth : 138,
+            hexagonHeight : 118,
+            hexagonGutter : 3,
+            hexagonRatio : 0.749
+        });
+
+    </script>
+
+</body>
+</html>
