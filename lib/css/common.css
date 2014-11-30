@@ -1,0 +1,27 @@
+@charset 'utf-8';
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,200); /*font-family: 'Raleway', sans-serif;*/
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+
+body{padding:0;margin:0;background:#222;overflow:hidden;}
+
+::-moz-selection{color:inherit;background:rgba(0,0,0,0);}
+::selection{color:inherit;background:rgba(0,0,0,0);}
+
+.cake-wrapper{font-family: 'Raleway', sans-serif;}
+
+.hexagon{background:url(../image/hexagon.cherry.svg);background-size:100% 100%;transition:0.2s;}
+.hexagon.play{transform:scale(0.95);}
+
+header{position:absolute;top:8px;left:8px;font-family: 'Comfortaa', cursive;color:#fff;cursor:default;}
+header h1{margin:0;font-weight:300;}
+header p{margin:0;}
+div.interface{position:absolute;top:0;right:0;font-family: 'Comfortaa', cursive;color:#fff;}
+div.interface ul.setting{margin:0;padding:0;list-style:none;}
+div.interface ul.setting li{float:right;padding:4px 14px 7px;font-size:0.938em;background:#222;border-top:3px solid #222;}
+div.interface ul.setting li:hover{border-top:3px solid #f03;}
+div.functions{z-index:30;width:100%;position:absolute;bottom:10%;font-family: 'Comfortaa', cursive;}
+div.functions ul{width:inherit;margin:0;padding:0;list-style:none;font-weigth:300;font-size:0.75em;text-align:center;}
+div.functions ul li{display:inline-block;padding: 5px 10px;border:1px solid #444;color:#666;cursor:default;transition:100ms;}
+div.functions ul li:hover{}
+div.functions ul li.on{border:1px solid #55ff00;color:#55ff00;}
+
