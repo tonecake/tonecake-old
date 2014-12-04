@@ -10,7 +10,7 @@ body{padding:0;margin:0;background:#222;overflow:hidden;}
 .cake-wrapper{font-family: 'Raleway', sans-serif;}
 
 .hexagon{background:url(../image/hexagon.cherry.svg);background-size:100% 100%;transition:0.2s;}
-.hexagon.play{transform:scale(0.95);}
+.hexagon.onEvent{transform:scale(0.95);}
 
 header{position:absolute;top:8px;left:8px;font-family: 'Comfortaa', cursive;color:#fff;cursor:default;}
 header h1{margin:0;font-weight:300;}
