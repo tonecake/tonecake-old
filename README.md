@@ -15,12 +15,13 @@ tonecake
 - Opera (webkit) 15.0+
 - Firefox for Android 25.0+
 - Chrome for Android 29.0+
-- Safari iOS (webkit) 6.0+
+- Safari for iOS (webkit) 6.0+
 - Opera Mobile for Android and Symbian 15.0+
 
-미지원 
+지원예정
 ------------------- 
 - Internet Explorer
 - Android Browser
-- BlackBerry Browser
-- Opera mini
+- BlackBerry 10
+- BlackBerry 5 ~ 7.1
+- Opera mini for iOS
