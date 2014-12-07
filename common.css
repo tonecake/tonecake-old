@@ -9,7 +9,7 @@ body{padding:0;margin:0;background:#222;overflow:hidden;}
 
 .cake-wrapper{font-family: 'Raleway', sans-serif;}
 
-.hexagon{background:url(../image/hexagon.cherry.svg);background-size:100% 100%;transition:0.2s;}
+.hexagon{background:url(./lib/image/hexagon.cherry.svg);background-size:100% 100%;transition:0.2s;}
 .hexagon.onEvent{transform:scale(0.95);}
 
 header{position:absolute;top:8px;left:8px;font-family: 'Comfortaa', cursive;color:#fff;cursor:default;}
@@ -25,3 +25,8 @@ div.functions ul li{display:inline-block;padding: 5px 10px;border:1px solid #444
 div.functions ul li:hover{}
 div.functions ul li.on{border:1px solid #55ff00;color:#55ff00;}
 
+div.menu{display:block;width:300px;height:100%;position:fixed;right:-300px;background:#fff;transition:300ms;}
+div.menu .btnOpen, div.menu .btnClose{position:absolute;padding:16px;}
+div.menu .btnOpen{left:-64px;}
+div.menu .btnClose{}
+div.menu ul.main{height:100%;position:relative;padding:64px 0 0;margin:0;overflow-y:scroll;}
