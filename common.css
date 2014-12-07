@@ -25,8 +25,8 @@ div.functions ul li{display:inline-block;padding: 5px 10px;border:1px solid #444
 div.functions ul li:hover{}
 div.functions ul li.on{border:1px solid #55ff00;color:#55ff00;}
 
-div.menu{display:block;width:300px;height:100%;position:fixed;right:-300px;background:#fff;transition:300ms;}
-div.menu .btnOpen, div.menu .btnClose{position:absolute;padding:16px;}
+div.menu{z-index:10;display:block;width:300px;height:100%;position:fixed;right:-300px;background:#333;box-shadow:0 -10px 10px #000;transition:300ms;}
+div.menu .btnOpen, div.menu .btnClose{z-index:30;position:absolute;padding:16px;}
 div.menu .btnOpen{left:-64px;}
 div.menu .btnClose{}
 div.menu ul.main{height:100%;position:relative;padding:64px 0 0;margin:0;overflow-y:scroll;}
