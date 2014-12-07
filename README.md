@@ -11,16 +11,16 @@ tonecake
 지원내용
 ------------------- 
 - Firefox 25.0+
-- Firefox for Android 25.0+
 - Chrome (webkit) 10.0+
-- Chrome for Android 29.0+
 - Safari (webkit) 6.0+
-- Safari for iOS (webkit) 6.0+
 - Opera (webkit) 15.0+
-- Opera Mobile for Android and Symbian 15.0+
 
 지원예정
 -------------------
+- Firefox for Android 25.0+
+- Chrome for Android 29.0+
+- Safari for iOS (webkit) 6.0+
+- Opera Mobile for Android and Symbian 15.0+
 - Internet Explorer
 - BlackBerry 10
 - Firefox OS
