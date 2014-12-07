@@ -11,6 +11,7 @@ body{padding:0;margin:0;background:#222;overflow:hidden;}
 
 .hexagon{background:url(./image/hexagon.cherry.svg);background-size:100% 100%;transition:0.2s;}
 .hexagon.onEvent{transform:scale(0.95);}
+.hexagon div{pointer-events:none;}
 
 header{position:absolute;top:8px;left:8px;font-family: 'Comfortaa', cursive;color:#fff;cursor:default;}
 header h1{margin:0;font-weight:300;}
@@ -19,14 +20,26 @@ div.interface{position:absolute;top:0;right:0;font-family: 'Comfortaa', cursive;
 div.interface ul.setting{margin:0;padding:0;list-style:none;}
 div.interface ul.setting li{float:right;padding:4px 14px 7px;font-size:0.938em;background:#222;border-top:3px solid #222;}
 div.interface ul.setting li:hover{border-top:3px solid #f03;}
-div.functions{z-index:30;width:100%;position:absolute;bottom:10%;font-family: 'Comfortaa', cursive;}
+div.functions{z-index:10;width:100%;position:absolute;bottom:10%;font-family: 'Comfortaa', cursive;}
 div.functions ul{width:inherit;margin:0;padding:0;list-style:none;font-weigth:300;font-size:0.75em;text-align:center;}
 div.functions ul li{display:inline-block;padding: 5px 10px;border:1px solid #444;color:#666;cursor:default;transition:100ms;}
 div.functions ul li:hover{}
 div.functions ul li.on{border:1px solid #55ff00;color:#55ff00;}
 
-div.menu{z-index:10;display:block;width:300px;height:100%;position:fixed;right:-300px;background:#333;box-shadow:0 -10px 10px #000;transition:300ms;}
-div.menu .btnOpen, div.menu .btnClose{z-index:30;position:absolute;padding:16px;}
+div.menu{z-index:20;display:block;height:100%;position:fixed;background:url(image/bg-triangle.gif);transition:300ms;}
+div.menu .btnOpen, div.menu .btnClose{z-index:30;position:absolute;padding:16px;cursor:pointer;}
+div.menu .btnOpen:hover, div.menu .btnClose:hover{opacity:0.8;}
 div.menu .btnOpen{left:-64px;}
-div.menu .btnClose{}
-div.menu ul.main{height:100%;position:relative;padding:64px 0 0;margin:0;overflow-y:scroll;}
+div.menu .btnClose{left:0;}
+div.menu ul.main{height:100%;position:relative;padding:64px 0 0;margin:0;overflow-y:scroll;font-family: 'Comfortaa', cursive;color:#fff;}
+div.menu ul.main li{position:relative;padding:8px 20px;}
+div.menu ul.main li.line{display:block;padding:10px;}
+@media only screen and (max-width: 640px){
+    div.menu{width:100%;right:100%;}
+}
+@media only screen and (min-width: 641px) and (max-width: 996px){
+    div.menu{width:50%;right:50%;}
+}
+@media only screen and (min-width: 997px){
+    div.menu{width:340px;right:-340px;}
+}

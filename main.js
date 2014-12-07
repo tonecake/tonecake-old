@@ -9,7 +9,7 @@ var menu = {
             btnClose = document.querySelector('.btnClose')
 
         container.style.right = '0px';
-        container.style.boxShadow = '0px 10px 40px 10px #000';
+        container.style.boxShadow = '0px 10px 40px 10px #00080f';
         btnOpen.style.display = 'none';
 
     },
