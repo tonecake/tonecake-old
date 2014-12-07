@@ -35,10 +35,10 @@ div.menu ul.main{height:100%;position:relative;padding:64px 0 0;margin:0;overflo
 div.menu ul.main li{position:relative;padding:8px 20px;}
 div.menu ul.main li.line{display:block;padding:10px;}
 @media only screen and (max-width: 640px){
-    div.menu{width:100%;right:100%;}
+    div.menu{width:100%;right:-100%;}
 }
 @media only screen and (min-width: 641px) and (max-width: 996px){
-    div.menu{width:50%;right:50%;}
+    div.menu{width:50%;right:-50%;}
 }
 @media only screen and (min-width: 997px){
     div.menu{width:340px;right:-340px;}
