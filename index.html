@@ -9,6 +9,7 @@
     <title>tonecake</title>
 
     <link rel="stylesheet" type="text/css" href="./common.css">
+    <link rel="stylesheet" type="text/css" href="./layout.css">
 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -42,17 +43,103 @@
         <div class="btnOpen" onClick="javascript:menu.open();"><img src="./image/interface-list.png" alt="menu"></div>
         <div class="btnClose" onClick="javascript:menu.close();"><img src="./image/interface-cancel.png" alt="close"></div>
         <ul class="main">
-            <li>Tutorial</li>
             <li class="line"></li>
-            <li>Modulation</li>
-            <li>History</li>
             <li class="line"></li>
-            <li>Display</li>
-            <li>Sound</li>
-            <li>Language</li>
             <li class="line"></li>
-            <li>Terms of Use</li>
-            <li></li>
+            <li><div class="li-name">Tutorial</div></li>
+            <li class="line"></li>
+            <li class="li-dropdown">
+                <div class="li-name">Modulation (A-Major)</div>
+                <div class="content">
+                    <div style="margin-bottom:10px;">
+                        <input id="tonality-dur" type="radio" name="tonality" value="dur">
+                        <label for="tonality-dur" id="tonality-dur-label" class="column-local m5">dur</label>
+                        <input id="tonality-moll" type="radio" name="tonality" value="moll">
+                        <label for="tonality-moll" id="tonality-moll-label" class="column-local m5">moll</label>
+                        <p class="floatFix"></p>
+                    </div>
+                    <div>
+                        <div class="cake-scale-wrapper" style="width:100%;position:relative;">
+                            <div class="cake" style="position:relative;">
+                                s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="li-dropdown">
+                <div class="li-name">A Calibration (A = <a class="currentA">442hz</a>)</div>
+                <div class="content">
+                    <div style="margin-bottom:10px;">current value : <a class="currentA">442hz</a></div>
+                    <input type="range" min="438" max="448" value="442" oninput="tuneA(this.value)" onchange="tuneA(this.value)">
+                </div>
+            </li>
+            <li class="li-dropdown">
+                <div class="li-name">Auto Positioning</div>
+                <div class="content">content</div>
+            </li>
+            <li class="li-dropdown">
+                <div class="li-name">Modes</div>
+                <div class="content">content</div>
+            </li>
+            <li class="line"></li>
+            <li class="li-dropdown">
+                <div class="li-name">Interface</div>
+                <div class="content">
+                    <div style="margin-bottom:10px;">
+                        <p style="margin:0 0 10px;">notation method</p>
+                        <input id="interface-notation-functions" type="radio" name="notation" value="functions">
+                        <label for="interface-notation-functions" id="interface-notation-functions-label" class="column-local mt">T-S-D</label>
+                        <input id="interface-notation-stufe" type="radio" name="notation" value="stufe">
+                        <label for="interface-notation-stufe" id="interface-notation-stufe-label" class="column-local mt">I-IV-V</label>
+                        <input id="interface-notation-noten" type="radio" name="notation" value="noten">
+                        <label for="interface-notation-noten" id="interface-notation-noten-label" class="column-local mt">C-F-G</label>
+                        <p class="floatFix"></p>
+                    </div>
+                </div>
+            </li>
+            <li class="li-dropdown">
+                <div class="li-name">Display</div>
+                <div class="content">
+                    <div style="margin-bottom:10px;">
+                        <p style="margin:0 0 10px;">hexagon color</p>
+                        -
+                    </div>
+                </div>
+            </li>
+            <li class="li-dropdown">
+                <div class="li-name">Sound</div>
+                <div class="content">
+                    <div style="margin-bottom:10px;">master volume</div>
+                    <input type="range" min="0" max="1" value="0.1" step="0.05" oninput="Organ.set.volume(this.value)" onchange="Organ.set.volume(this.value)">
+                    <div style="margin:10px 0;">soprano</div>
+                    <input type="range" min="0" max="1" value="0.1" step="0.05" oninput="Organ.set.volume(this.value, 'soprano')" onchange="Organ.set.volume(this.value, 'soprano')">
+                    <div style="margin-bottom:10px;">alto</div>
+                    <input type="range" min="0" max="1" value="0.1" step="0.05" oninput="Organ.set.volume(this.value, 'alto')" onchange="Organ.set.volume(this.value, 'alto')">
+                    <div style="margin-bottom:10px;">tenor</div>
+                    <input type="range" min="0" max="1" value="0.1" step="0.05" oninput="Organ.set.volume(this.value, 'tenor')" onchange="Organ.set.volume(this.value, 'tenor')">
+                    <div style="margin-bottom:10px;">bass</div>
+                    <input type="range" min="0" max="1" value="0.1" step="0.05" oninput="Organ.set.volume(this.value, 'bass')" onchange="Organ.set.volume(this.value, 'bass')">
+                </div>
+            </li>
+            <li class="li-dropdown">
+                <div class="li-name">Language</div>
+                <div class="content">
+                    <div style="margin-bottom:10px;">
+                        <p style="margin:0 0 10px;">language setting (reload required)</p>
+                        <input id="language-english" type="radio" name="language" value="english">
+                        <label for="language-english" id="language-english-label" class="column-local mt">English</label>
+                        <input id="language-deutsch" type="radio" name="language" value="deutsch">
+                        <label for="language-deutsch" id="language-deutsch-label" class="column-local mt">Deutsch</label>
+                        <input id="language-korean" type="radio" name="language" value="korean">
+                        <label for="language-korean" id="language-korean-label" class="column-local mt">한국어</label>
+                        <p class="floatFix"></p>
+                    </div>
+                </div>
+            </li>
+            <li class="line"></li>
+            <li><div class="li-name">Terms of Use</div></li>
+            <li><div class="li-name">Credits</div></li>
         </ul>
     </div>
 
@@ -62,6 +149,23 @@
 
         ga('create', 'UA-56330530-1', 'auto');
         ga('send', 'pageview');
+
+        document.querySelector('.main').style.height = this.offsetHeight + 64 + 'px';
+
+        var liName = document.querySelectorAll('.li-name');
+        for( i=0; i<liName.length; i++ ){
+            liName[i].addEventListener('click', function(){
+                if( this.className === 'li-name' ){
+                    this.offsetParent.childNodes[1].style.color = '#f07800';
+                    this.offsetParent.childNodes[3].style.display = 'block';
+                    this.className = 'li-name open';
+                } else {
+                    this.offsetParent.childNodes[1].style.color = 'inherit';
+                    this.offsetParent.childNodes[3].style.display = 'none';
+                    this.className = 'li-name';
+                }
+            });
+        }
 
         var cake = tonecake.create({
             tone : 'a',

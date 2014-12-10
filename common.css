@@ -26,14 +26,18 @@ div.functions ul li{display:inline-block;padding: 5px 10px;border:1px solid #444
 div.functions ul li:hover{}
 div.functions ul li.on{border:1px solid #55ff00;color:#55ff00;}
 
-div.menu{z-index:20;display:block;height:100%;position:fixed;background:url(image/bg-triangle.gif);transition:300ms;}
+div.menu{z-index:20;display:block;height:100%;position:fixed;background-image:url(image/bg-triangle.gif);background-attachment:scroll;transition:300ms;-moz-box-sizing:border-box;}
 div.menu .btnOpen, div.menu .btnClose{z-index:30;position:absolute;padding:16px;cursor:pointer;}
 div.menu .btnOpen:hover, div.menu .btnClose:hover{opacity:0.8;}
 div.menu .btnOpen{left:-64px;}
 div.menu .btnClose{left:0;}
-div.menu ul.main{height:100%;position:relative;padding:64px 0 0;margin:0;overflow-y:scroll;font-family: 'Comfortaa', cursive;color:#fff;}
-div.menu ul.main li{position:relative;padding:8px 20px;}
+div.menu ul.main{height:100%;position:relative;padding:0;margin:0;list-style:none;overflow-y:scroll;font-family: 'Comfortaa', cursive;color:#fff;}
+div.menu ul.main li{position:relative;}
 div.menu ul.main li.line{display:block;padding:10px;}
+div.menu ul.main li div.li-name{padding:8px 16px;cursor:pointer;transition:300ms;}
+div.menu ul.main li div.li-name:hover{opacity:0.8;}
+div.menu ul.main li div.content{display:none;padding:8px 16px;background:#222;background:#444;font-family: 'Raleway', sans-serif;}
+div.content input[type=range]{width:100%;box-sizing:border-box;margin:0;padding:0;}
 @media only screen and (max-width: 640px){
     div.menu{width:100%;right:-100%;}
 }
@@ -41,5 +45,21 @@ div.menu ul.main li.line{display:block;padding:10px;}
     div.menu{width:50%;right:-50%;}
 }
 @media only screen and (min-width: 997px){
-    div.menu{width:340px;right:-340px;}
+    div.menu{width:33%;right:-33%;}
 }
+
+input[type=checkbox],input[type=radio]{display:none;}
+label{display:block;position:relative;cursor:pointer;background:#444;}
+input[type=checkbox] + label,input[type=radio] + label{}
+input[type=checkbox]:checked + label,input[type=radio]:checked + label{background:#fff;color:#222;}
+
+#tonality-dur-label{padding:5px;border:1px solid #fff;border-right:0;border-radius:2px 0 0 2px;text-align:center;}
+#tonality-moll-label{padding:5px;border:1px solid #fff;border-left:0;border-radius:0 2px 2px 0;text-align:center;}
+
+#interface-notation-functions-label{padding:5px;border:1px solid #fff;border-right:0;border-radius:2px 0 0 2px;text-align:center;}
+#interface-notation-stufe-label{padding:5px;border:1px solid #fff;border-left:0;border-right:0;border-radius:0;text-align:center;}
+#interface-notation-noten-label{padding:5px;border:1px solid #fff;border-left:0;border-radius:0 2px 2px 0;text-align:center;}
+
+#language-english-label{padding:5px;border:1px solid #fff;border-right:0;border-radius:2px 0 0 2px;text-align:center;}
+#language-deutsch-label{padding:5px;border:1px solid #fff;border-left:0;border-right:0;border-radius:0;text-align:center;}
+#language-korean-label{padding:5px;border:1px solid #fff;border-left:0;border-radius:0 2px 2px 0;text-align:center;}
